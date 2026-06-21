@@ -1,0 +1,6 @@
+{
+  "name": "영문중 교실 자리배치기",
+  "description": "아무도 영문을 알리 없는 영문중 자리 배치기",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

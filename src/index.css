@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&family=Dela+Gothic+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", "Noto Sans KR", sans-serif;
+  --font-game: "Dela Gothic One", sans-serif;
+}
+
+/* Custom visual pulse effect for the roulette draw */
+@keyframes roulette-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.03); opacity: 1; filter: brightness(1.15); }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.roulette-active {
+  animation: roulette-pulse 0.4s infinite ease-in-out;
+}
+
+/* Print configuration to easily export the seating chart */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-card {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+}
